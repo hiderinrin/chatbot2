@@ -41,6 +41,6 @@ if st.session_state["messages"]:
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
         speaker = "ゆかりの質問🙂"
         if message["role"]=="assistant":
-            speaker="がん看護AI🤖"
+            speaker="成人・老年看護AI🤖"
 
         st.write(speaker + ": " + message["content"])
