@@ -20,6 +20,7 @@ def communicate():
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
+        temperature = 0.5,
         messages=messages
     )  
 
@@ -41,6 +42,6 @@ if st.session_state["messages"]:
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
         speaker = "ゆかりの質問🙂"
         if message["role"]=="assistant":
-            speaker="成人・老年看護AI🤖"
+            speaker="成人・老年看護学AI🤖"
 
         st.write(speaker + ": " + message["content"])
